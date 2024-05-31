@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <title>Bankist</title>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav class="row">
+      <div class="col-lg-3 col-xl-2 col-md-4 col-sm-3 col-8">
+        <p class="welcome">Log in to get started</p>
+      </div>
+
+      <div class="col-lg-5 col-xl-7 col-md-3 col-sm-2 col-4">
+        <img src="logo.png" alt="Logo" class="logo" />
+      </div>
+
+      <div class="col-lg-4 col-xl-3 col-md-5 col-sm-7 col-12 mt-3 mt-sm-0">
+        <form class="login">
+          <input
+            type="text"
+            placeholder="user"
+            class="login__input login__input--user"
+          />
+          <input
+            type="text"
+            placeholder="PIN"
+            maxlength="4"
+            class="login__input login__input--pin"
+          />
+          <button class="login__btn ms-2">&rarr;</button>
+        </form>
+      </div>
+    </nav>
+
+    <main class="app m-auto row  mt-3">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div class="col-md-10">
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">
+            As of <span class="date">05/03/2037</span>
+          </p>
+        </div>
+        <div class="col-md-2">
+          <p class="balance__value mt-3 mt-sm-0">0000€</p>
+        </div>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="row">
+        <div class="movements col-md-6 order-2 order-md-1">
+          <div class="movements__row row">
+            <div class="movements__type movements__type--deposit col-4 col-sm-2 col-xs-2 col-md-3 col-lg-3  text-center py-2 me-2">
+              2 deposit
+            </div>
+
+            <div class="col-3">
+              <div class="movements__date">3 days ago</div>
+            </div>
+            <div class="col-4">
+              <div class="movements__value ">4000€</div>
+            </div>
+          </div>
+
+          <div class="movements__row row">
+            <div class="movements__type movements__type--withdraw col-4 col-sm-2 col-xs-2 col-md-3 col-lg-3 text-center py-2 me-2">
+              1 withdraw
+            </div>
+            <div class="col-3 ">
+              <div class="movements__date">24/01/2037</div>
+            </div>
+            <div class="col-4">
+              <div class="movements__value">-378€</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 order-1 order-md-2">
+          <div class="operation operation--transfer">
+            <h2>Transfer money</h2>
+            <form class="form form--transfer">
+              <input type="text" class="form__input form__input--to" />
+              <input type="number" class="form__input form__input--amount" />
+              <button class="form__btn form__btn--transfer">&rarr;</button>
+              <label class="form__label">Transfer to</label>
+              <label class="form__label">Amount</label>
+            </form>
+          </div>
+
+          <!-- OPERATION: LOAN -->
+          <div class="operation operation--loan mt-2 mt-md-4">
+            <h2>Request loan</h2>
+            <form class="form form--loan">
+              <input
+                type="number"
+                class="form__input form__input--loan-amount"
+              />
+              <button class="form__btn form__btn--loan">&rarr;</button>
+              <label class="form__label form__label--loan">Amount</label>
+            </form>
+          </div>
+
+          <!-- OPERATION: CLOSE -->
+          <div class="operation operation--close mt-2 mt-md-4">
+            <h2>Close account</h2>
+            <form class="form form--close">
+              <input type="text" class="form__input form__input--user" />
+              <input
+                type="password"
+                maxlength="6"
+                class="form__input form__input--pin"
+              />
+              <button class="form__btn form__btn--close">&rarr;</button>
+              <label class="form__label">Confirm user</label>
+              <label class="form__label">Confirm PIN</label>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="row">
+        <div class="summary col-md-5 col-12">
+          <p class="summary__label">In</p>
+          <p class="summary__value summary__value--in">0000€</p>
+          <p class="summary__label">Out</p>
+          <p class="summary__value summary__value--out">0000€</p>
+          <p class="summary__label">Interest</p>
+          <p class="summary__value summary__value--interest">0000€</p>
+          <button class="btn--sort">&downarrow; SORT</button>
+        </div>
+      </div>
+
+      <!-- OPERATION: TRANSFERS -->
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer"></span>
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+  </body>
+</html>
