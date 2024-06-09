@@ -113,7 +113,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 // LECTURES
 
-alert(`Acountes to login : \n 1- USER : js , PIN : 1111 \n 2- USER : jd , PIN : 2222 \n 3- USER : stw , PIN : 3333 \n 4- USER : ss , PIN : 4444`)
+alert(`All Acountes you can login : \n 1- user : js , PIN : 1111 \n 2- user : jd , PIN : 2222 \n 3- user : stw , PIN : 3333 \n 4- user : ss , PIN : 4444`)
 
 const formatMovementsDate = function (date, lacale) {
   const calcDaysPassed = (d1, d2) => Math.round(Math.abs(d1 - d2) / (1000 * 60 * 60 * 24))
