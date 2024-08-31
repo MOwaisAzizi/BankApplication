@@ -15,7 +15,9 @@ body {
   color: #444;
   background-color: #f3f3f3;
   height: 100vh;
-  /* padding: 2rem; */
+  padding: 2rem 0;
+  width: 100%;
+
 }
 
 nav {
@@ -39,16 +41,15 @@ nav {
 }
 
 .login__input {
-  border: none;
-  padding: 0.2rem 0.6rem;
-  font-size: 1.6rem;
+  padding: 0.1rem 0.6rem;
+  font-size: 2rem;
   font-family: inherit;
   text-align: center;
   width: 10rem;
   border-radius: 10rem;
   margin-right: 0.5rem;
   color: inherit;
-  border: 1px solid #fff;
+  border: 1px solid #f1efef;
   transition: all 0.3s;
 }
 
@@ -64,7 +65,7 @@ nav {
 .login__btn {
   border: none;
   background: none;
-  font-size: 2.2rem;
+  font-size: 4rem;
   color: inherit;
   cursor: pointer;
   transition: all 0.3s;
@@ -81,18 +82,16 @@ nav {
 /* MAIN */
 .app {
   position: relative;
-  max-width: 100rem;
-  /* margin-top: 4rem;
-  margin-bottom: 4rem; */
+  max-width: 130rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   margin: auto;
   display: grid;
   grid-template-columns: 4fr 3fr;
   grid-template-rows: auto repeat(3, 15rem) auto;
   gap: 2rem;
-/* margin-left: 99px; */
   opacity: 0;
   transition: all 1s;
-
 }
 
 
@@ -110,11 +109,6 @@ nav {
   font-weight: 500;
   margin-bottom: -0.2rem;
 }
-@media screen and (max-width: 400px) {
-  .balance__label {
-    font-size: 1.5rem;
-  }
-}
 
 .balance__date {
   font-size: 1.4rem;
@@ -124,11 +118,6 @@ nav {
 .balance__value {
   font-size: 4.5rem;
   font-weight: 400;
-}
-@media screen and (max-width: 400px) {
-  .balance__value {
-    font-size: 2rem;
-  }
 }
 
 /* MOVEMENTS */
@@ -178,11 +167,6 @@ nav {
   margin-left: auto;
   float:right;
 }
-@media screen and (max-width: 400px) {
-  .movements__type ,.movements__value ,.movements__date{
-    font-size: 1rem;
-  }
-}
 
 /* SUMMARY */
 .summary {
@@ -201,21 +185,10 @@ nav {
 }
 
 .summary__value {
-  font-size: 2rem;
-  margin-right: 1.5rem;
+  font-size: 2.22rem;
+  margin-right: 2.5rem;
 }
-@media screen and (min-width: 800px) {
-  .summary__value {
-    font-size: 2.2rem;
-    margin-right: 2.5rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  .summary__value,.summary__label {
-    font-size: 1.3rem;
-    margin-right: 0.5rem;
-  }
-}
+
 
 .hid{
   display: none;
@@ -234,7 +207,7 @@ nav {
   margin-left: auto;
   border: none;
   background: none;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -242,14 +215,8 @@ nav {
 /* OPERATIONS */
 .operation {
   border-radius: 1rem;
-  padding: 3rem 4rem;
+  padding: 4.5rem 4rem;
   color: #221e1e;
-}
-@media screen and (max-width: 400px) {
-  .operation {
-    max-width: 100%;
-    border: solid;
-  }
 }
 
 .operation--transfer {
@@ -295,7 +262,7 @@ h2 {
   font-size: 1.5rem;
   text-align: center;
   color: #333;
-  padding: 0.3rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.7rem;
   transition: all 0.3s;
 }
@@ -328,9 +295,49 @@ h2 {
   padding: 0 0.3rem;
   margin-top: 1.9rem;
   text-align: right;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .timer {
   font-weight: 600;
 }
+
+@media screen and (max-width: 400px) {
+  .summary__value{
+    font-size: 1.2rem;
+    margin-right: 0;
+  }  
+  .summary__label  {
+    font-size: 1rem;
+    margin-left: 0.7rem;
+  }
+
+  .login__input {
+    padding: 0;
+    font-size: 1.6rem;
+  }
+  .operation {
+    max-width: 100%;
+  }
+  
+  .movements__type ,.movements__value ,.movements__date{
+    font-size: 1rem;
+  }
+  .balance__value {
+    font-size: 2rem;
+  }
+  .balance__label {
+    font-size: 1.5rem;
+  }
+  .logout-timer {
+    font-size: 1.6rem;
+  }
+}
+
+/* @media screen and (min-width: 800px) {
+  .summary__value {
+    font-size: 2.2rem;
+    margin-right: 2.5rem;
+  } */
+
+/* } */

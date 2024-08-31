@@ -111,7 +111,8 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-// LECTURES
+inputCloseUsername.value = ''
+inputClosePin.value = ''
 
 alert(`All Acountes you can login : \n 1- user : js , PIN : 1111 \n 2- user : jd , PIN : 2222 \n 3- user : stw , PIN : 3333 \n 4- user : ss , PIN : 4444`)
 
@@ -144,14 +145,7 @@ const displaymovements = function (acc, sort = false) {
     const formatedMov = formatcalNum(mov, acc.currency, acc.lacale)
 
     const Html =
-      // `
-      // <div class="movements__row"> 
-      //   <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
-      //   <div class="movements__date">${displayDate}</div>
-      //   <div class="movements__value">${formatedMov}</div>   
-      // </div>
-      // `
-      `         <div class="movements__row row">
+    ` <div class="movements__row row">
     <div class="movements__type movements__type--${type} col-4 col-sm-2 col-xs-2 col-md-3 col-lg-3 text-center py-2  me-2">
     ${i + 1} ${type}
     </div>
@@ -163,7 +157,6 @@ const displaymovements = function (acc, sort = false) {
     </div>
   </div>
 </div>`
-    //${mov.toFixed(2)}
     containerMovements.insertAdjacentHTML('afterbegin', Html)
   });
 }
@@ -228,7 +221,6 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Wellcome Back,${currentAcount.owner.split(' ')[0]}`
     containerApp.style.opacity = 100
     const date = new Date()
-
     //   const year = date.getFullYear()
     //  const Mounth = `${date.getMonth()}`.padStart(2,0)
     //  const Day = `${date.getDate()}`.padStart(2,0)
