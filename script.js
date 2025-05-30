@@ -6,7 +6,7 @@
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [7, 45, -400, 3000, -650, -130, 7, 1300],
-  interestRate: 1.2, // %
+  interestRate: 1.2, 
   pin: 1111,
 
   movementsDates: [
@@ -179,7 +179,6 @@ const displaySummary = (acc) => {
     filter(int => int > 0).reduce((acc, cur) => acc + cur)
   // labelSumInterest.textContent = `${interest.toFixed(2)}₤`
   labelSumInterest.textContent = formatcalNum(interest, acc.currency, acc.lacale)
-
 
 }
 

@@ -207,7 +207,7 @@ nav {
   margin-left: auto;
   border: none;
   background: none;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 500;
   cursor: pointer;
 }
@@ -333,11 +333,3 @@ h2 {
     font-size: 1.6rem;
   }
 }
-
-/* @media screen and (min-width: 800px) {
-  .summary__value {
-    font-size: 2.2rem;
-    margin-right: 2.5rem;
-  } */
-
-/* } */
