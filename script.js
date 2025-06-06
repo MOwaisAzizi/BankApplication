@@ -1,12 +1,10 @@
 'use strict';
 
-// BANKIST APP
-
 // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [7, 45, -400, 3000, -650, -130, 7, 1300],
-  interestRate: 1.2, 
+  interestRate: 1.2,
   pin: 1111,
 
   movementsDates: [
@@ -145,7 +143,7 @@ const displaymovements = function (acc, sort = false) {
     const formatedMov = formatcalNum(mov, acc.currency, acc.lacale)
 
     const Html =
-    ` <div class="movements__row row">
+      ` <div class="movements__row row">
     <div class="movements__type movements__type--${type} col-4 col-sm-2 col-xs-2 col-md-3 col-lg-3 text-center py-2  me-2">
     ${i + 1} ${type}
     </div>
